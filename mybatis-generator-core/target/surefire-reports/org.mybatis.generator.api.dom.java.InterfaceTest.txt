@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------
+Test set: org.mybatis.generator.api.dom.java.InterfaceTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.014 sec <<< FAILURE! - in org.mybatis.generator.api.dom.java.InterfaceTest
+testInterfaceFields(org.mybatis.generator.api.dom.java.InterfaceTest)  Time elapsed: 0.011 sec  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The method lineSeparator() is undefined for the type System
+	The method lineSeparator() is undefined for the type System
+	The method lineSeparator() is undefined for the type System
+	The method lineSeparator() is undefined for the type System
+	The method lineSeparator() is undefined for the type System
+
+	at org.mybatis.generator.api.dom.java.InterfaceTest.testInterfaceFields(InterfaceTest.java:119)
+
