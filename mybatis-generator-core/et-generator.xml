@@ -20,20 +20,20 @@
 			type="org.mybatis.generator.internal.types.MyJavaTypeResolver">
 			<property name="forceBigDecimals" value="false" />
 		</javaTypeResolver>
-		<!-- Model包名和位置 -->
-		<javaModelGenerator targetPackage="com.hzsun.easytong.mapper.pojo"
-			targetProject="E:\Workspaces\Eclipse\easytong_all\easytong_mapper\src\main\java">
+		<!-- po类包名和位置 -->
+		<javaModelGenerator targetPackage="com.hzsun.et.po"
+			targetProject="E:\Workspaces\Eclipse\et\et-dao\src\main\java">
 			<property name="enableSubPackages" value="true" />
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
 		<!-- xml文件包名和位置 -->
-		<sqlMapGenerator targetPackage="mybatis"
-			targetProject="E:\Workspaces\Eclipse\easytong_all\easytong_mapper\src\main\resources">
+		<sqlMapGenerator targetPackage="sql"
+			targetProject="E:\Workspaces\Eclipse\et\et-dao\src\main\resources">
 			<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
-		<!-- Dao包名和位置 -->
+		<!-- dao包名和位置 -->
 		<javaClientGenerator type="XMLMAPPER"
-			targetPackage="com.hzsun.easytong.mapper" targetProject="E:\Workspaces\Eclipse\easytong_all\easytong_mapper\src\main\java">
+			targetPackage="com.hzsun.et.dao" targetProject="E:\Workspaces\Eclipse\et\et-dao\src\main\java">
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 		<!-- 要生成那些表(更改tableName和domainObjectName就可以) -->
@@ -41,7 +41,7 @@
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
 			selectByExampleQueryId="false" /> -->
-		<table tableName="OM_SERVICELOG" 
+		<table tableName="SC_BUSINESS" 
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
 			selectByExampleQueryId="false" />
