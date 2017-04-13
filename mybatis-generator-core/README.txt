@@ -2,6 +2,7 @@
 
 1.Oracle的Integer类型映射成Java的Integer（原本是BigDecimal）
 2.生成文件改成“覆盖”模式（原本是追加模式）
+3.Oracle的Date类型映射成JDBCTYPE的TIMESTAMP，修复时分秒没有的bug
 
 ====
        Copyright ${license.git.copyrightYears} the original author or authors.

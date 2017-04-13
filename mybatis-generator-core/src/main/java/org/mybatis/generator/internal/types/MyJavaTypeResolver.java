@@ -54,7 +54,7 @@ public class MyJavaTypeResolver implements JavaTypeResolver {
                 new FullyQualifiedJavaType(String.class.getName())));
         typeMap.put(Types.DATALINK, new JdbcTypeInformation("DATALINK", //$NON-NLS-1$
                 new FullyQualifiedJavaType(Object.class.getName())));
-        typeMap.put(Types.DATE, new JdbcTypeInformation("DATE", //$NON-NLS-1$
+        typeMap.put(Types.DATE, new JdbcTypeInformation("TIMESTAMP", //$NON-NLS-1$
                 new FullyQualifiedJavaType(Date.class.getName())));
         typeMap.put(Types.DECIMAL, new JdbcTypeInformation("DECIMAL", //$NON-NLS-1$
                 new FullyQualifiedJavaType(BigDecimal.class.getName())));
