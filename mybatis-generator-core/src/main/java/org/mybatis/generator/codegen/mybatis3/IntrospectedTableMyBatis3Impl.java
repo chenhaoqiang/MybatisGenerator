@@ -270,11 +270,12 @@ public class IntrospectedTableMyBatis3Impl extends IntrospectedTable {
             * 原来中的 GeneratedXmlFile 保留；将其中构造函数中的true 修改为 ： false; 
             * 设置 isMergeable = false； 在生成 xml文件的时候，将不是合并，而是直接覆盖； 
             */ 
-            String tmp = context.getProperty("mergeable"); 
+            // String tmp = context.getProperty("mergeable"); 
          	boolean mergeable = false; 
-         	if("true".equalsIgnoreCase(tmp)){ 
+         	// 还是决定不采用覆盖了。
+         	/*if("true".equalsIgnoreCase(tmp)){ 
          		mergeable = true; 
-            } 
+            } */
             GeneratedXmlFile gxf = new GeneratedXmlFile(document,
                 getMyBatis3XmlMapperFileName(), getMyBatis3XmlMapperPackage(),
                 context.getSqlMapGeneratorConfiguration().getTargetProject(),

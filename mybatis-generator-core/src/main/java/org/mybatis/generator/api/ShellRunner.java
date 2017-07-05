@@ -41,6 +41,8 @@ import org.mybatis.generator.logging.LogFactory;
  * @author Jeff Butler
  */
 public class ShellRunner {
+	public static final boolean ISNEW = false;
+	public static final String SCHEMA_NAME = "BMMG";
     private static final String CONFIG_FILE = "-configfile"; //$NON-NLS-1$
     private static final String OVERWRITE = "-overwrite"; //$NON-NLS-1$
     private static final String CONTEXT_IDS = "-contextids"; //$NON-NLS-1$

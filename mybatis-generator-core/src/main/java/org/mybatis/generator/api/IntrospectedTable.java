@@ -1342,7 +1342,12 @@ public abstract class IntrospectedTable {
             sb.append(tableConfiguration.getMapperName());
         } else {
             sb.append(fullyQualifiedTable.getDomainObjectName());
-            sb.append("Mapper"); //$NON-NLS-1$
+            // TODO po文件名
+            if(ShellRunner.ISNEW) {
+            	sb.append("NewMapper"); //$NON-NLS-1$
+            } else {
+            	sb.append("Mapper");
+            }
         }
         setMyBatis3JavaMapperType(sb.toString());
 
@@ -1380,30 +1385,47 @@ public abstract class IntrospectedTable {
     protected void calculateModelAttributes() {
         String pakkage = calculateJavaModelPackage();
 
+        // TODO 实体类名
         StringBuilder sb = new StringBuilder();
         sb.append(pakkage);
         sb.append('.');
-        sb.append(fullyQualifiedTable.getDomainObjectName());
+        if(ShellRunner.ISNEW) {
+        	sb.append(fullyQualifiedTable.getDomainObjectName() + "new");
+        } else {
+        	sb.append(fullyQualifiedTable.getDomainObjectName());
+        }
         sb.append("Key"); //$NON-NLS-1$
         setPrimaryKeyType(sb.toString());
 
         sb.setLength(0);
         sb.append(pakkage);
         sb.append('.');
-        sb.append(fullyQualifiedTable.getDomainObjectName());
+        if(ShellRunner.ISNEW) {
+        	sb.append(fullyQualifiedTable.getDomainObjectName() + "new");
+        } else {
+        	sb.append(fullyQualifiedTable.getDomainObjectName());
+        }
         setBaseRecordType(sb.toString());
 
         sb.setLength(0);
         sb.append(pakkage);
         sb.append('.');
-        sb.append(fullyQualifiedTable.getDomainObjectName());
+        if(ShellRunner.ISNEW) {
+        	sb.append(fullyQualifiedTable.getDomainObjectName() + "new");
+        } else {
+        	sb.append(fullyQualifiedTable.getDomainObjectName());
+        }
         sb.append("WithBLOBs"); //$NON-NLS-1$
         setRecordWithBLOBsType(sb.toString());
 
         sb.setLength(0);
         sb.append(pakkage);
         sb.append('.');
-        sb.append(fullyQualifiedTable.getDomainObjectName());
+        if(ShellRunner.ISNEW) {
+        	sb.append(fullyQualifiedTable.getDomainObjectName() + "new");
+        } else {
+        	sb.append(fullyQualifiedTable.getDomainObjectName());
+        }
         sb.append("Example"); //$NON-NLS-1$
         setExampleType(sb.toString());
     }
@@ -1464,7 +1486,12 @@ public abstract class IntrospectedTable {
             sb.append(".xml"); //$NON-NLS-1$
         } else {
             sb.append(fullyQualifiedTable.getDomainObjectName());
-            sb.append("Mapper.xml"); //$NON-NLS-1$
+            // TODO xml文件名
+            if(ShellRunner.ISNEW) {
+            	sb.append("NewMapper.xml"); //$NON-NLS-1$
+            } else {
+            	sb.append("Mapper.xml"); //$NON-NLS-1$
+            }
         }
         return sb.toString();
     }
@@ -1491,7 +1518,12 @@ public abstract class IntrospectedTable {
             sb.append(tableConfiguration.getMapperName());
         } else {
             sb.append(fullyQualifiedTable.getDomainObjectName());
-            sb.append("Mapper"); //$NON-NLS-1$
+            // TODO xml的命名空间
+            if(ShellRunner.ISNEW) {
+            	sb.append("NewMapper"); //$NON-NLS-1$
+            } else {
+            	sb.append("Mapper"); //$NON-NLS-1$
+            }
         }
         return sb.toString();
     }

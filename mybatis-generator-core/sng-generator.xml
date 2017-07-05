@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<!-- 数据库驱动包位置 -->
+	<!-- <classPathEntry location="D:\generator\mysql-connector-java-5.1.31.jar" 
+		/> -->
+	<classPathEntry location="D:\generator\ojdbc-10.2.0.1.0.jar" />
+	<context id="DB2Tables" targetRuntime="MyBatis3">
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+		<!-- 数据库链接URL、用户名、密码 -->
+		<!--<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/manager?characterEncoding=utf8" 
+			userId="root" password="1234"> -->
+		<jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver"
+			connectionURL="jdbc:oracle:thin:@192.168.1.227:1521:zyoracle"
+			userId="BMMG" password="310012">
+		</jdbcConnection>
+		<javaTypeResolver
+			type="org.mybatis.generator.internal.types.MyJavaTypeResolver">
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+		<!-- Model包名和位置 -->
+		<javaModelGenerator targetPackage="com.hzsun.authority.bean"
+			targetProject="D:\generator\src">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		<!-- xml文件包名和位置 -->
+		<sqlMapGenerator targetPackage="sql"
+			targetProject="D:\generator\src">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+		<!-- Dao包名和位置 -->
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.hzsun.authority.mapper" targetProject="D:\generator\src">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+		<!-- 要生成那些表(更改tableName和domainObjectName就可以) -->
+        <table tableName="SC_DICT"
+enableCountByExample="false" enableUpdateByExample="false"
+enableDeleteByExample="false" enableSelectByExample="false"
+selectByExampleQueryId="false" />
+<table tableName="SC_DICTTYPE"
+enableCountByExample="false" enableUpdateByExample="false"
+enableDeleteByExample="false" enableSelectByExample="false"
+selectByExampleQueryId="false" />
+<table tableName="SC_CAMPUS"
+enableCountByExample="false" enableUpdateByExample="false"
+enableDeleteByExample="false" enableSelectByExample="false"
+selectByExampleQueryId="false" />
+<table tableName="SC_DUTY"
+enableCountByExample="false" enableUpdateByExample="false"
+enableDeleteByExample="false" enableSelectByExample="false"
+selectByExampleQueryId="false" />
+<table tableName="SC_DUTYAUTHORITY"
+enableCountByExample="false" enableUpdateByExample="false"
+enableDeleteByExample="false" enableSelectByExample="false"
+selectByExampleQueryId="false" />
+<table tableName="SC_ETAPP"
+enableCountByExample="false" enableUpdateByExample="false"
+enableDeleteByExample="false" enableSelectByExample="false"
+selectByExampleQueryId="false" />
+<table tableName="SC_ENTERPRICE"
+enableCountByExample="false" enableUpdateByExample="false"
+enableDeleteByExample="false" enableSelectByExample="false"
+selectByExampleQueryId="false" />
+<table tableName="SC_MODULE"
+enableCountByExample="false" enableUpdateByExample="false"
+enableDeleteByExample="false" enableSelectByExample="false"
+selectByExampleQueryId="false" />
+<table tableName="SC_OPERATOR"
+enableCountByExample="false" enableUpdateByExample="false"
+enableDeleteByExample="false" enableSelectByExample="false"
+selectByExampleQueryId="false" />
+<table tableName="SC_OPERATOR_DEPNUM"
+enableCountByExample="false" enableUpdateByExample="false"
+enableDeleteByExample="false" enableSelectByExample="false"
+selectByExampleQueryId="false" />
+<table tableName="SC_ROLES"
+enableCountByExample="false" enableUpdateByExample="false"
+enableDeleteByExample="false" enableSelectByExample="false"
+selectByExampleQueryId="false" />
+<table tableName="SC_ROLES_DUTY"
+enableCountByExample="false" enableUpdateByExample="false"
+enableDeleteByExample="false" enableSelectByExample="false"
+selectByExampleQueryId="false" />
+<table tableName="SC_WORKSPACE"
+enableCountByExample="false" enableUpdateByExample="false"
+enableDeleteByExample="false" enableSelectByExample="false"
+selectByExampleQueryId="false" />
+<table tableName="SC_WORKSPACE_MODULE"
+enableCountByExample="false" enableUpdateByExample="false"
+enableDeleteByExample="false" enableSelectByExample="false"
+selectByExampleQueryId="false" />
+
+
+
+
+
+	</context>
+</generatorConfiguration>

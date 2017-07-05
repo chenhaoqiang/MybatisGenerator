@@ -42,6 +42,7 @@ import org.mybatis.generator.api.FullyQualifiedTable;
 import org.mybatis.generator.api.IntrospectedColumn;
 import org.mybatis.generator.api.IntrospectedTable;
 import org.mybatis.generator.api.JavaTypeResolver;
+import org.mybatis.generator.api.ShellRunner;
 import org.mybatis.generator.api.dom.java.FullyQualifiedJavaType;
 import org.mybatis.generator.api.dom.java.JavaReservedWords;
 import org.mybatis.generator.config.ColumnOverride;
@@ -636,27 +637,28 @@ public class DatabaseIntrospector {
             if (supportsIsGeneratedColumn) {
                 introspectedColumn.setGeneratedColumn("YES".equals(rs.getString("IS_GENERATEDCOLUMN"))); //$NON-NLS-1$ //$NON-NLS-2$
             }
-
-            ActualTableName atn = new ActualTableName(
-                    rs.getString("TABLE_CAT"), //$NON-NLS-1$
-                    rs.getString("TABLE_SCHEM"), //$NON-NLS-1$
-                    rs.getString("TABLE_NAME")); //$NON-NLS-1$
-
-            List<IntrospectedColumn> columns = answer.get(atn);
-            if (columns == null) {
-                columns = new ArrayList<IntrospectedColumn>();
-                answer.put(atn, columns);
-            }
-
-            columns.add(introspectedColumn);
-
-            if (logger.isDebugEnabled()) {
-                logger.debug(getString(
-                        "Tracing.2", //$NON-NLS-1$
-                        introspectedColumn.getActualColumnName(), Integer
-                                .toString(introspectedColumn.getJdbcType()),
-                        atn.toString()));
-            }
+			if(ShellRunner.SCHEMA_NAME.equals(rs.getString("TABLE_SCHEM"))) {
+				ActualTableName atn = new ActualTableName(
+						rs.getString("TABLE_CAT"), //$NON-NLS-1$
+						rs.getString("TABLE_SCHEM"), //$NON-NLS-1$
+						rs.getString("TABLE_NAME")); //$NON-NLS-1$
+				
+				List<IntrospectedColumn> columns = answer.get(atn);
+				if (columns == null) {
+					columns = new ArrayList<IntrospectedColumn>();
+					answer.put(atn, columns);
+				}
+				
+				columns.add(introspectedColumn);
+				
+				if (logger.isDebugEnabled()) {
+					logger.debug(getString(
+							"Tracing.2", //$NON-NLS-1$
+							introspectedColumn.getActualColumnName(), Integer
+							.toString(introspectedColumn.getJdbcType()),
+							atn.toString()));
+				}
+			}
         }
 
         closeResultSet(rs);

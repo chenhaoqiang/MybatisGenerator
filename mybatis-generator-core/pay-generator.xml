@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE generatorConfiguration  
+ PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"  
+ "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">  
+<generatorConfiguration>  
+ <!-- ?????????-->
+ <classPathEntry  location="D:\generator\ojdbc-10.2.0.1.0.jar"/>  
+ <context id="DB2Tables"  targetRuntime="MyBatis3">  
+  <commentGenerator>
+   <property name="suppressAllComments" value="true" />
+  </commentGenerator>
+  <!-- 数据库链接URL、用户名、密码 -->
+  <!--<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/manager?characterEncoding=utf8" 
+   userId="root" password="1234"> --> 
+  <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver"
+   connectionURL="jdbc:oracle:thin:@192.168.1.101:1521:easytongDB"
+   userId="easytong" password="310012">
+  </jdbcConnection>
+  <javaTypeResolver
+   type="org.mybatis.generator.internal.types.MyJavaTypeResolver">
+   <property name="forceBigDecimals" value="false" />
+  </javaTypeResolver>
+  <!-- Model包名和位置 -->
+  <javaModelGenerator targetPackage="com.hzsun.pay.beans.pojo"
+   targetProject="E:\src">
+   <property name="enableSubPackages" value="true" />
+   <property name="trimStrings" value="true" />
+  </javaModelGenerator>
+  <!-- xml文件包名和位置 -->
+  <sqlMapGenerator targetPackage="mybatis"
+   targetProject="E:\src">
+   <property name="enableSubPackages" value="true" />
+  </sqlMapGenerator>
+  <!-- Dao包名和位置 -->
+  <javaClientGenerator type="XMLMAPPER"
+   targetPackage="com.hzsun.pay.mapper" targetProject="E:\src">
+   <property name="enableSubPackages" value="true" />
+  </javaClientGenerator>
+ 
+  <table tableName="UM_userbind"  enableCountByExample="false" 
+   enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" 
+   selectByExampleQueryId="false"></table>
+ 
+  <table tableName="UM_MemberCard"  enableCountByExample="false" 
+   enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" 
+   selectByExampleQueryId="false"></table>
+ 
+  <table tableName="UM_tradeorder"  enableCountByExample="false" 
+   enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" 
+   selectByExampleQueryId="false"></table>
+
+
+ </context>  
+</generatorConfiguration>

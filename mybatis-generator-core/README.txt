@@ -1,8 +1,9 @@
 本项目是对Mybatis生成器源码做了相应改良：
 
 1.Oracle的Integer类型映射成Java的Integer（原本是BigDecimal）
-2.生成文件改成“覆盖”模式（原本是追加模式）
+2.生成文件改成“覆盖”模式（原本是追加模式）---IntrospectedTableMyBatis3Impl line276
 3.Oracle的Date类型映射成JDBCTYPE的TIMESTAMP，修复时分秒没有的bug
+4.表名生成是带new的配置。IntrospectedTable 4个TODO
 
 ====
        Copyright ${license.git.copyrightYears} the original author or authors.
