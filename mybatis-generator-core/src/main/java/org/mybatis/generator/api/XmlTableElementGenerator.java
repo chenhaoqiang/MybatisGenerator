@@ -2,8 +2,7 @@ package org.mybatis.generator.api;
 
 public class XmlTableElementGenerator {
 	public static void main(String[] args) {
-		String[] tableNames = new String[] { "SC_DICT","SC_DICTTYPE", "SC_CAMPUS", "SC_DUTY", "SC_DUTYAUTHORITY", "SC_ETAPP", "SC_ENTERPRICE", "SC_MODULE",
-		        "SC_OPERATOR", "SC_OPERATOR_DEPNUM", "SC_ROLES", "SC_ROLES_DUTY", "SC_WORKSPACE", "SC_WORKSPACE_MODULE" };
+		String[] tableNames = new String[] { "SC_SYSCONFIG","SC_TABLEMAXNUM", "SC_UPDATELOG"};
 		String s = getTable(tableNames);
 		System.out.println(s);
 	}

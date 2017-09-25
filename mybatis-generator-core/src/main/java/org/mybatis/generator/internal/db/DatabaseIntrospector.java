@@ -637,7 +637,7 @@ public class DatabaseIntrospector {
             if (supportsIsGeneratedColumn) {
                 introspectedColumn.setGeneratedColumn("YES".equals(rs.getString("IS_GENERATEDCOLUMN"))); //$NON-NLS-1$ //$NON-NLS-2$
             }
-			if(ShellRunner.SCHEMA_NAME.equals(rs.getString("TABLE_SCHEM"))) {
+			if(ShellRunner.SCHEMA_NAME.equals("") || ShellRunner.SCHEMA_NAME.equals(rs.getString("TABLE_SCHEM"))) {
 				ActualTableName atn = new ActualTableName(
 						rs.getString("TABLE_CAT"), //$NON-NLS-1$
 						rs.getString("TABLE_SCHEM"), //$NON-NLS-1$

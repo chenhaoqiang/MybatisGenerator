@@ -4,17 +4,17 @@
 	<!-- 数据库驱动包位置 -->
 	<!-- <classPathEntry location="D:\generator\mysql-connector-java-5.1.31.jar" 
 		/> -->
-	<classPathEntry location="D:\generator\ojdbc-10.2.0.1.0.jar" />
+	<classPathEntry location="D:\generator\mysql-connector-java-5.1.18.jar" />
 	<context id="DB2Tables" targetRuntime="MyBatis3">
 		<commentGenerator>
 			<property name="suppressAllComments" value="true" />
 		</commentGenerator>
 		<!-- 数据库链接URL、用户名、密码 -->
-		<!--<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/manager?characterEncoding=utf8" 
-			userId="root" password="1234"> -->
-		<jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver"
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:Mysql://192.168.7.233:3306/test?characterEncoding=utf8" 
+			userId="root" password="1234">
+		<!--<jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver"
 			connectionURL="jdbc:oracle:thin:@192.168.1.101:1521:easytongDB"
-			userId="easytong" password="310012">
+			userId="easytong" password="310012"> -->
 		</jdbcConnection>
 		<javaTypeResolver
 			type="org.mybatis.generator.internal.types.MyJavaTypeResolver">
@@ -37,19 +37,7 @@
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 		<!-- 要生成那些表(更改tableName和domainObjectName就可以) -->
-		<!-- <table tableName="AC_Door" domainObjectName="ACDoor"
-			enableCountByExample="false" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="false"
-			selectByExampleQueryId="false" /> -->
-		<table tableName="OM_SERVICELOG" 
-			enableCountByExample="false" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="false"
-			selectByExampleQueryId="false" />
-		<table tableName="OM_SERVICEPARAM" 
-			enableCountByExample="false" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="false"
-			selectByExampleQueryId="false" />
-		<table tableName="SC_DICT_EP" 
+		<table tableName="am_test"
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
 			selectByExampleQueryId="false" />

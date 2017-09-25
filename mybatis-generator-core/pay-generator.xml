@@ -37,18 +37,10 @@
    <property name="enableSubPackages" value="true" />
   </javaClientGenerator>
  
-  <table tableName="UM_userbind"  enableCountByExample="false" 
+  <table tableName="UM_payWay"  enableCountByExample="false" 
    enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" 
    selectByExampleQueryId="false"></table>
  
-  <table tableName="UM_MemberCard"  enableCountByExample="false" 
-   enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" 
-   selectByExampleQueryId="false"></table>
- 
-  <table tableName="UM_tradeorder"  enableCountByExample="false" 
-   enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" 
-   selectByExampleQueryId="false"></table>
-
 
  </context>  
 </generatorConfiguration>

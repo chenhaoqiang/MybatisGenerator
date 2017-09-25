@@ -37,7 +37,23 @@
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 		<!-- 要生成那些表(更改tableName和domainObjectName就可以) -->
-        <table tableName="fm_Accsubjecttrans_Detail"
+        <table tableName="OP_Balance"
+          enableCountByExample="false" enableUpdateByExample="false"
+          enableDeleteByExample="false" enableSelectByExample="false"
+          selectByExampleQueryId="false" />
+        <table tableName="OP_BalArea"
+          enableCountByExample="false" enableUpdateByExample="false"
+          enableDeleteByExample="false" enableSelectByExample="false"
+          selectByExampleQueryId="false" />
+        <table tableName="OP_BalDealer"
+          enableCountByExample="false" enableUpdateByExample="false"
+          enableDeleteByExample="false" enableSelectByExample="false"
+          selectByExampleQueryId="false" />
+        <table tableName="OP_BalDockingDealer"
+          enableCountByExample="false" enableUpdateByExample="false"
+          enableDeleteByExample="false" enableSelectByExample="false"
+          selectByExampleQueryId="false" />
+        <table tableName="OP_BalSubject"
           enableCountByExample="false" enableUpdateByExample="false"
           enableDeleteByExample="false" enableSelectByExample="false"
           selectByExampleQueryId="false" />

@@ -13,88 +13,32 @@
 		<!--<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/manager?characterEncoding=utf8" 
 			userId="root" password="1234"> -->
 		<jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver"
-			connectionURL="jdbc:oracle:thin:@192.168.1.227:1521:zyoracle"
-			userId="BMMG" password="310012">
+			connectionURL="jdbc:oracle:thin:@192.168.1.101:1521:easytongDB"
+			userId="easytong" password="310012">
 		</jdbcConnection>
 		<javaTypeResolver
 			type="org.mybatis.generator.internal.types.MyJavaTypeResolver">
 			<property name="forceBigDecimals" value="false" />
 		</javaTypeResolver>
 		<!-- Model包名和位置 -->
-		<javaModelGenerator targetPackage="com.hzsun.authority.bean"
-			targetProject="D:\generator\src">
+		<javaModelGenerator targetPackage="com.hzsun.youngcenter.bean.pojo"
+			targetProject="D:\generator\src\main\java">
 			<property name="enableSubPackages" value="true" />
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
 		<!-- xml文件包名和位置 -->
-		<sqlMapGenerator targetPackage="sql"
-			targetProject="D:\generator\src">
+		<sqlMapGenerator targetPackage="mybatis"
+			targetProject="D:\generator\src\main\resources">
 			<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
 		<!-- Dao包名和位置 -->
 		<javaClientGenerator type="XMLMAPPER"
-			targetPackage="com.hzsun.authority.mapper" targetProject="D:\generator\src">
+			targetPackage="com.hzsun.youngcenter.mapper" targetProject="D:\generator\src\main\java">
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 		<!-- 要生成那些表(更改tableName和domainObjectName就可以) -->
-        <table tableName="SC_DICT"
-enableCountByExample="false" enableUpdateByExample="false"
-enableDeleteByExample="false" enableSelectByExample="false"
-selectByExampleQueryId="false" />
-<table tableName="SC_DICTTYPE"
-enableCountByExample="false" enableUpdateByExample="false"
-enableDeleteByExample="false" enableSelectByExample="false"
-selectByExampleQueryId="false" />
-<table tableName="SC_CAMPUS"
-enableCountByExample="false" enableUpdateByExample="false"
-enableDeleteByExample="false" enableSelectByExample="false"
-selectByExampleQueryId="false" />
-<table tableName="SC_DUTY"
-enableCountByExample="false" enableUpdateByExample="false"
-enableDeleteByExample="false" enableSelectByExample="false"
-selectByExampleQueryId="false" />
-<table tableName="SC_DUTYAUTHORITY"
-enableCountByExample="false" enableUpdateByExample="false"
-enableDeleteByExample="false" enableSelectByExample="false"
-selectByExampleQueryId="false" />
-<table tableName="SC_ETAPP"
-enableCountByExample="false" enableUpdateByExample="false"
-enableDeleteByExample="false" enableSelectByExample="false"
-selectByExampleQueryId="false" />
-<table tableName="SC_ENTERPRICE"
-enableCountByExample="false" enableUpdateByExample="false"
-enableDeleteByExample="false" enableSelectByExample="false"
-selectByExampleQueryId="false" />
-<table tableName="SC_MODULE"
-enableCountByExample="false" enableUpdateByExample="false"
-enableDeleteByExample="false" enableSelectByExample="false"
-selectByExampleQueryId="false" />
-<table tableName="SC_OPERATOR"
-enableCountByExample="false" enableUpdateByExample="false"
-enableDeleteByExample="false" enableSelectByExample="false"
-selectByExampleQueryId="false" />
-<table tableName="SC_OPERATOR_DEPNUM"
-enableCountByExample="false" enableUpdateByExample="false"
-enableDeleteByExample="false" enableSelectByExample="false"
-selectByExampleQueryId="false" />
-<table tableName="SC_ROLES"
-enableCountByExample="false" enableUpdateByExample="false"
-enableDeleteByExample="false" enableSelectByExample="false"
-selectByExampleQueryId="false" />
-<table tableName="SC_ROLES_DUTY"
-enableCountByExample="false" enableUpdateByExample="false"
-enableDeleteByExample="false" enableSelectByExample="false"
-selectByExampleQueryId="false" />
-<table tableName="SC_WORKSPACE"
-enableCountByExample="false" enableUpdateByExample="false"
-enableDeleteByExample="false" enableSelectByExample="false"
-selectByExampleQueryId="false" />
-<table tableName="SC_WORKSPACE_MODULE"
-enableCountByExample="false" enableUpdateByExample="false"
-enableDeleteByExample="false" enableSelectByExample="false"
-selectByExampleQueryId="false" />
-
-
+        <table tableName="PX_RelStudentContact" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
+        
 
 
 
