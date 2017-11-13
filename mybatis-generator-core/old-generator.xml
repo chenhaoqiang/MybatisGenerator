@@ -22,22 +22,22 @@
 		</javaTypeResolver>
 		<!-- Model包名和位置 -->
 		<javaModelGenerator targetPackage="com.hzsun.easytong.mapper.pojo"
-			targetProject="E:\Workspaces\Eclipse\easytong_all\easytong_mapper\src\main\java">
+			targetProject="E:\易通项目\mybatis-generator\old">
 			<property name="enableSubPackages" value="true" />
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
 		<!-- xml文件包名和位置 -->
 		<sqlMapGenerator targetPackage="mybatis"
-			targetProject="E:\Workspaces\Eclipse\easytong_all\easytong_mapper\src\main\resources">
+			targetProject="E:\易通项目\mybatis-generator\old">
 			<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
 		<!-- Dao包名和位置 -->
 		<javaClientGenerator type="XMLMAPPER"
-			targetPackage="com.hzsun.easytong.mapper" targetProject="E:\Workspaces\Eclipse\easytong_all\easytong_mapper\src\main\java">
+			targetPackage="com.hzsun.easytong.mapper" targetProject="E:\易通项目\mybatis-generator\old">
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 		<!-- 要生成那些表(更改tableName和domainObjectName就可以) -->
-		<table tableName="ss_classfeeitem" 
+		<table tableName="DD_DeviceFixid" 
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
 			selectByExampleQueryId="false" />

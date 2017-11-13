@@ -2,9 +2,7 @@ package org.mybatis.generator;
 
 public class Test {
 	public static void main(String[] args) {
-		test(new String[] { "CW_Invoice", "CW_WasteInvoice", "CW_OPTInVoice", "CW_StuPayBooks", "IA_User", "IA_UserAppAcc", "PM_ClassFee",
-		        "PM_StuClassPay", "PX_APPLY", "PX_Attach", "PX_CLASS", "PX_ClassGrp", "PX_ClassType", "PX_IniteCode", "PX_PayItem", "PX_SPECIALTY",
-		        "PX_STUDENT", "PX_StudentContact", "PX_TEACHER", "PX_TeacherClass", "PX_TeacherContact", "PX_discount", "PX_stuAttach" });
+		test(new String[] { "ds_approve_log", "ds_download_log", "ds_encode_item", "ds_encode_type", "ds_info_item", "ds_info_type", "ds_version_control", "ds_version_statistics"});
 	}
 
 	private static void test(String[] tableNames) {

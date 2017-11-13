@@ -82,7 +82,8 @@ public abstract class BaseRules implements Rules {
             return false;
         }
         
-        return tableConfiguration.isInsertStatementEnabled();
+        // return tableConfiguration.isInsertStatementEnabled();
+        return false;
     }
 
     /**

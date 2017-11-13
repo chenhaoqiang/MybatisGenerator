@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<!-- 数据库驱动包位置 -->
+	<!-- <classPathEntry location="D:\generator\mysql-connector-java-5.1.31.jar" 
+		/> -->
+	<classPathEntry location="D:\generator\ojdbc-10.2.0.1.0.jar" />
+	<context id="DB2Tables" targetRuntime="MyBatis3">
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+		<!-- 数据库链接URL、用户名、密码 -->
+		<!--<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/manager?characterEncoding=utf8" 
+			userId="root" password="1234"> -->
+		<jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver"
+			connectionURL="jdbc:oracle:thin:@210.26.116.167/ds"
+			userId="ds" password="dS#!))12">
+		</jdbcConnection>
+		<javaTypeResolver
+			type="org.mybatis.generator.internal.types.MyJavaTypeResolver">
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+		<!-- Model包名和位置 -->
+		<javaModelGenerator targetPackage="com.hzsun.ds.mapper.po"
+			targetProject="E:\兰大数据中心\ds">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		<!-- xml文件包名和位置 -->
+		<sqlMapGenerator targetPackage="sql"
+			targetProject="E:\兰大数据中心\ds">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+		<!-- Dao包名和位置 -->
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.hzsun.ds.mapper.api" targetProject="E:\兰大数据中心\ds">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+		<!-- 要生成那些表(更改tableName和domainObjectName就可以) -->
+<table tableName="ds_approve_log" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
+<table tableName="ds_download_log" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
+<table tableName="ds_encode_item" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
+<table tableName="ds_encode_type" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
+<table tableName="ds_info_item" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
+<table tableName="ds_info_type" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
+<table tableName="ds_version_control" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
+<table tableName="ds_version_statistics" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
+
+
+
+	</context>
+</generatorConfiguration>
